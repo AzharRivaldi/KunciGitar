@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_main" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/bg_rounded_line">
+
+                <EditText
+                    android:id="@+id/inputJudul"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:hint="Masukan judul lagu yang spesifik"
+                    android:imeOptions="actionDone"
+                    android:paddingStart="10dp"
+                    android:singleLine="true"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imageClear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/ic_delete" />
+
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/btnPencarian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_button"
+                android:text="Cari Kunci Gitar"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/linearHasil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvKunciGitar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="10sp"
+                        android:padding="15dp"
+                        android:text="@string/app_name"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>
